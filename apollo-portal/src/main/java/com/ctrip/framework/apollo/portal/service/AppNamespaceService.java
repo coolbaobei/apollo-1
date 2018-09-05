@@ -92,7 +92,7 @@ public class AppNamespaceService {
     }
 
     if (!ConfigFileFormat.isValidFormat(appNamespace.getFormat())) {
-     throw new BadRequestException("Invalid namespace format. format must be properties、json、yaml、yml、xml");
+     throw new BadRequestException("Invalid namespace format. format must be properties、json、yaml、yml、xml、toml");
     }
 
     String operator = appNamespace.getDataChangeCreatedBy();

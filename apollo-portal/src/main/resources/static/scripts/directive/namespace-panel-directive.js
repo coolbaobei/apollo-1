@@ -311,7 +311,7 @@ function directive($window, toastr, AppUtil, EventManager, PermissionService, Na
                     namespace.viewName =
                         namespace.baseInfo.namespaceName.replace(".xml", "").replace(
                             ".properties", "").replace(".json", "").replace(".yml", "")
-                            .replace(".yaml", "");
+                            .replace(".yaml", "").replace(".toml", "");
 
                     if (!viewType) {
                         if (namespace.isPropertiesFormat) {

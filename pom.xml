@@ -533,6 +533,7 @@
 					<include>**/*.yaml</include>
 					<include>**/*.properties</include>
 					<include>**/*.xml</include>
+					<include>**/*.toml</include>
 				</includes>
 			</resource>
 			<resource>
@@ -543,6 +544,7 @@
 					<exclude>**/*.yaml</exclude>
 					<exclude>**/*.properties</exclude>
 					<exclude>**/*.xml</exclude>
+					<exclude>**/*.toml</exclude>
 				</excludes>
 			</resource>
 			<resource>
@@ -902,14 +904,29 @@
 			</plugin>
 		</plugins>
 	</reporting>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>maven-public</id>
+			<name>maven-public</name>
+			<url>https://maven.changhong.io/nexus/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
 	<distributionManagement>
 		<repository>
 			<id>releases</id>
-			<url>${releases.repo}</url>
+			<name>Nexus Release Repository</name>
+			<url>https://maven.changhong.io/nexus/content/repositories/releases/</url>
 		</repository>
 		<snapshotRepository>
 			<id>snapshots</id>
-			<url>${snapshots.repo}</url>
+			<name>Nexus Snapshot Repository</name>
+			<url>https://maven.changhong.io/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 </project>
